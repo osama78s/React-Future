@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(55 65 81);
+}
+
+::-webkit-scrollbar-track {
+    background: #18181b;
+}
+textarea{
+    resize: none;
+}
+ .height{
+    height: 64px;
+ }
+input,
+textarea{
+    outline: none;
+}
+input:focus::placeholder,
+textarea:focus::placeholder{
+    opacity: 0;
+    transition: all 0.3s;
+}
+html{
+    font-family: "Rubik", sans-serif;
+}
+.rotate{
+    transform: rotate(360deg);
+}
+nav .container ul li a.active{
+    color: rgb(150 234 99);
+}
+.home h1,
+.pricing h1,
+.features h1,
+.contact h1{
+    animation: slideTop forwards ease 1s;
+    opacity: 0;
+}
+.home > p,
+.pricing h4,
+.features p{
+    animation: slideTop forwards ease 1s;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+.home > div,
+.image1,
+.image2,
+.alls > div:nth-child(2){
+    animation: slideTop forwards ease 1s;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+.rows:first-of-type,
+.basic,
+.image3,
+.input1,
+.input3{
+    opacity: 0;
+    animation: slideRight forwards ease 2s;
+    animation-delay: .3s;
+}
+.rows:nth-of-type(2),
+.premium,
+.image4,
+.btn{
+    opacity: 0;
+    animation: slideTop forwards ease 2s;
+    animation-delay: .3s;
+}
+.rows:last-of-type,
+.enterprice,
+.image5,
+.input2,
+.input4{
+    opacity: 0;
+    animation: slideLeft forwards ease 2s;
+    animation-delay: .3s;
+}
+span.number{
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+span.number::before{
+    content: '$';
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    font-size: 25px;
+    color: white;
+}
+.image4,
+.image3,
+.image5{
+    animation-delay: 1s;
+}
+
+@keyframes slideRight{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideLeft{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideTop{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
