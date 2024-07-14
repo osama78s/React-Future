@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navbar } from './Components/Navbar';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate  } from 'react-router-dom';
 import { Pricing } from './Components/Pages/Pricing';
 import { Home } from './Components/Pages/Home';
 import { Features } from './Components/Pages/Features';
@@ -31,6 +31,7 @@ function App() {
       <Navbar theme={theme} setTheme={setTheme}/>
       <HidenNav/>
       <Routes>
+        <Route path='/' element={<Navigate to="/home" />} />
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Pricing' element={<Pricing/>}></Route>
         <Route path='/Futures' element={<Features />}></Route>
