@@ -32,7 +32,7 @@ function App() {
       <HidenNav/>
       <Routes>
         <Route path='/' element={<Navigate to="/home" />} />
-        <Route path='/' element={<Home/>}></Route>
+        <Route path='/home' element={<Home/>}></Route>
         <Route path='/Pricing' element={<Pricing/>}></Route>
         <Route path='/Futures' element={<Features />}></Route>
         <Route path='/Contact' element={<Contact />}></Route>

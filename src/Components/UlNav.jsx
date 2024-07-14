@@ -5,7 +5,7 @@ export const UlNav = () => {
   return (
     <ul className='md:me-20 dark:text-white text-black flex me-6 space-x-6 md:space-x-12'>
     <li>
-        <NavLink to="/"
+        <NavLink to="/home"
         className={({ isPending, isActive }) => 
             isPending ? 'pending' : isActive ? 'active' : ''
         }>
